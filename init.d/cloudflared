@@ -1,0 +1,12 @@
+#!/sbin/openrc-run
+
+name=$RC_SVCNAME
+description="cloudflared DNS over HTTPS proxy"
+supervisor="supervise-daemon"
+command="/usr/local/bin/cloudflared"
+command_args="proxy-dns --port 5053 --upstream https://1.1.1.1/dns-query --upstream https://1.0.0.1/dns-query"
+command_user="cloudflared"
+
+depend() {
+	after syslog network-online 
+}

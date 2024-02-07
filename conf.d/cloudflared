@@ -1,0 +1,4 @@
+command="/usr/local/bin/cloudflared"
+command_args="proxy-dns --port 5053 --upstream https://1.1.1.1/dns-query --upstream https://1.0.0.1/dns-query"
+command_user="cloudflared"
+supervisor="supervise-daemon"

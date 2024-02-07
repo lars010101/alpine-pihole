@@ -2,8 +2,7 @@
 
 # Install cloudflared
 apk add bind-tools
-wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-lin
-ux-arm
+wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm
 mv -f ./cloudflared-linux-arm /usr/local/bin/cloudflared
 mv ./init.d/cloudflared /etc/init.d/cloudflared
 mv ./conf.d/cloudflared /etc/conf.d/cloudflared

@@ -2,29 +2,11 @@
 
 name=$RC_SVCNAME
 description="cloudflared DNS over HTTPS proxy"
-#supervisor="supervise-daemon"
 
 depend()
 {
 	after syslog network-online
 }
-
-#start()
-#{
-#	ebegin "Starting cloudflared DNS over HTTPS proxy"
-#	if ! swclock "${swclock_file}" 2> /dev/null; then
-#		/usr/local/bin/cloudflared proxy-dns ${command_args}	
-#	fi
-#	eend $?
-#}
-
-#stop()
-#{
-#	ebegin "Stopping cloudflared DNS over HTTPS proxy"
-#	swclock --save "${swclock_file}"
-#	eend $?
-#}
-
 
 
 
